@@ -120,6 +120,12 @@
         margin-top: 10px;
     }
 
+    .containerBorder .books .booksList .bookDetails input {
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
+    }
+
     .containerBorder .books .booksList .bookDetails span {
         text-decoration: underline;
         padding-bottom: 5px;
