@@ -1,4 +1,3 @@
-
 const addElement = (elementType, elementAttributes, elementText, elementParent) => {
     const element = document.createElement(`${elementType}`);
     element.setAttribute(`${elementAttributes.type}`, `${elementAttributes.value}`);
@@ -48,19 +47,19 @@ const removeTile = (id) => {
     return element.parentNode.removeChild(element);
 }
 
-const deleteBook = (ind) => {
+const deleteBook = (index) => {
 
     const books = JSON.parse(localStorage.getItem('books'));
-    books.splice(ind,1);
+    books.splice(index,1);
     localStorage.setItem('books',JSON.stringify(books));
     getBookList();
 
 }
 
-const updateBook = (ind, book) => {
+const updateBook = (index, book) => {
 
     const books = JSON.parse(localStorage.getItem('books'));
-    books.splice(ind,1,book);
+    books.splice(index,1,book);
     localStorage.setItem('books',JSON.stringify(books));
 
 }

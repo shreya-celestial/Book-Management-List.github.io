@@ -1,4 +1,3 @@
-
 let text = '';
 let attributes = new ElementAttributes('class', 'container');
 addElement('div', attributes, text, 'body');

@@ -1,23 +1,7 @@
 let count = 0;
-const insertBookBtn = document.querySelector('button#insertBookBtn');
-const insertBookDiv = document.querySelector('div.insertBookDiv');
-const insertBookForm = document.querySelector('form#insertNewBookForm');
 
-insertBookDiv.setAttribute('style', 'display: none');
-
-let books;
-
-if(localStorage.getItem('books') === null)
-{
-    books = [];
-}
-else
-{
-    books = JSON.parse(localStorage.getItem('books'));
-}
-
-insertBookBtn.onclick = () => {
-    if(count==0 || count%2==0)
+clickInsertBookBtn = () => {
+    if(count===0 || count%2===0)
     {
         insertBookBtn.children[0].style.transform = 'rotate(90deg)'
         insertBookDiv.removeAttribute('style');
@@ -30,7 +14,9 @@ insertBookBtn.onclick = () => {
     count++;
 }
 
-insertBookForm.onsubmit = (e) => {
+
+const submitNewBookForm = (e) => {
+
     e.preventDefault();
     
     const book = {
@@ -54,8 +40,5 @@ insertBookForm.onsubmit = (e) => {
     insertBookDiv.setAttribute('style', 'display: none');
     insertBookBtn.children[0].style.transform = 'rotate(0deg)';
     count++;
-    getBookList();
 
 }
-
-
