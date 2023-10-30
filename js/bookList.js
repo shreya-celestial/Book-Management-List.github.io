@@ -27,11 +27,11 @@ const getBookList = () => {
 
             renderBooksLoop(book,index);
 
-        })
+        });
 
     }
 
-}  
+};  
 
 getBookList();
 

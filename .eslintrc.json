@@ -12,6 +12,7 @@
         "prefer-const": "warn",
         "no-unused-vars": "off",
         "no-undef": "off",
-        "eqeqeq": "warn"
+        "eqeqeq": "warn",
+        "semi": "warn"
     }
 }

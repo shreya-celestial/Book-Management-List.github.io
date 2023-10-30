@@ -16,9 +16,9 @@ const tileClicked = (bookTile,book,index) => {
     const deleteBtn = document.getElementById('deleteBtn');
     deleteBtn.onclick = () => {
         deleteBook(index);
-    }
+    };
 
-}
+};
 
 
 const bookName = (book,index) => {
@@ -42,7 +42,7 @@ const bookName = (book,index) => {
 
         clickDetailElements(name, input);
         
-    }
+    };
 
     input.onblur = (e) => {
         
@@ -53,9 +53,9 @@ const bookName = (book,index) => {
         
         updateBook(index, book);
         
-    }
+    };
 
-}
+};
 
 const bookDetails = (book,index) => {
 
@@ -78,7 +78,7 @@ const bookDetails = (book,index) => {
 
         clickDetailElements(details, input);
         
-    }
+    };
 
     input.onblur = (e) => {
         
@@ -89,9 +89,9 @@ const bookDetails = (book,index) => {
         
         updateBook(index, book);
         
-    }
+    };
 
-}
+};
 
 const bookAuthor = (book,index) => {
 
@@ -114,7 +114,7 @@ const bookAuthor = (book,index) => {
 
         clickDetailElements(author, input);
         
-    }
+    };
 
     input.onblur = (e) => {
         
@@ -125,9 +125,9 @@ const bookAuthor = (book,index) => {
         
         updateBook(index, book);
         
-    }
+    };
 
-}
+};
 
 const bookPrice = (book,index) => {
 
@@ -150,7 +150,7 @@ const bookPrice = (book,index) => {
 
         clickDetailElements(price, input);
         
-    }
+    };
 
     input.onblur = (e) => {
         
@@ -161,9 +161,9 @@ const bookPrice = (book,index) => {
         
         updateBook(index, book);
         
-    }
+    };
 
-}
+};
 
 const bookDate = (book,index) => {
 
@@ -186,7 +186,7 @@ const bookDate = (book,index) => {
 
         clickDetailElements(date, input);
         
-    }
+    };
 
     input.onblur = (e) => {
         
@@ -197,7 +197,7 @@ const bookDate = (book,index) => {
         
         updateBook(index, book);
         
-    }
+    };
 
-}
+};
 

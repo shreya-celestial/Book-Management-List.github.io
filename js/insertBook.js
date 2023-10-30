@@ -1,7 +1,7 @@
 attributes = new ElementAttributes('src','./assets/arrow.png');
 addElement('img', attributes, text, 'button#insertBookBtn');
 
-text = 'Insert Book Detail'
+text = 'Insert Book Detail';
 attributes = '';
 addElement('p', attributes, text, 'button#insertBookBtn');
 

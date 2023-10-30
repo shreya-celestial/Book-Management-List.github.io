@@ -16,13 +16,13 @@ else
 
 insertBookBtn.onclick = () => {
     clickInsertBookBtn();
-}
+};
 
 insertBookForm.onsubmit = (e) => {
     
     submitNewBookForm(e);
     getBookList();
 
-}
+};
 
 

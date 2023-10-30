@@ -5,3 +5,5 @@ npm init @eslint/config     //creates eslint config file
 "lint": "eslint ./js/*"     //add this to scripts of package.json and point to the folder where js files are there(for eg. here I've pointed to all the files in the folder names js)
 npm run lint        //can use this cmd to check files after addind the above cmd
 create an .eslintignore file if your folder have other files too
+
+npx eslint --fix ./js/*         //to fix the warnings and point to the folder where js files are there(for eg. here I've pointed to all the files in the folder names js)

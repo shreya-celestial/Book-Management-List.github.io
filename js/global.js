@@ -3,12 +3,12 @@ const addElement = (elementType, elementAttributes, elementText, elementParent) 
     element.setAttribute(`${elementAttributes.type}`, `${elementAttributes.value}`);
     element.innerText = `${elementText}`;
     document.querySelector(`${elementParent}`).appendChild(element);
-}
+};
 
 const ElementAttributes = function (type,value) {
     this.type = type;
     this.value = value;
-}
+};
 
 const newInputsForForm = (type, name, parentElement) => {
     const element = document.createElement('input');
@@ -16,7 +16,7 @@ const newInputsForForm = (type, name, parentElement) => {
     element.setAttribute('name', `${name}`);
     element.setAttribute('required', 'true');
     document.querySelector(`${parentElement}`).appendChild(element);
-}
+};
 
 const addElementAfter = (elementType, id, elementText, elementParent) => {
     const element = document.createElement(`${elementType}`);
@@ -24,14 +24,14 @@ const addElementAfter = (elementType, id, elementText, elementParent) => {
     element.setAttribute('id', id);
     element.innerText = `${elementText}`;
     elementParent.after(element);
-}
+};
 
 const addDetailElements = (elementType, elementAttributes, elementText, elementParentId) => {
     const element = document.createElement(`${elementType}`);
     element.setAttribute(`${elementAttributes.type}`, `${elementAttributes.value}`);
     element.innerText = `${elementText}`;
     document.getElementById(`${elementParentId}`).appendChild(element);
-}
+};
 
 const inputForUpdate = (type, id, value, parentElement) => {
     const element = document.createElement('input');
@@ -40,12 +40,12 @@ const inputForUpdate = (type, id, value, parentElement) => {
     element.setAttribute('value', value);
     element.setAttribute('style', 'display: none');
     document.querySelector(parentElement).appendChild(element);
-}
+};
 
 const removeTile = (id) => {
     const element = document.getElementById(id);
     return element.parentNode.removeChild(element);
-}
+};
 
 const deleteBook = (index) => {
 
@@ -54,7 +54,7 @@ const deleteBook = (index) => {
     localStorage.setItem('books',JSON.stringify(books));
     getBookList();
 
-}
+};
 
 const updateBook = (index, book) => {
 
@@ -62,4 +62,4 @@ const updateBook = (index, book) => {
     books.splice(index,1,book);
     localStorage.setItem('books',JSON.stringify(books));
 
-}
+};

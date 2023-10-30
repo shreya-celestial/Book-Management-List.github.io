@@ -18,8 +18,8 @@ renderBooksLoop = (book,index) => {
         
         count = clickBookTile(count,bookTile,book,index);
 
-    }
-}
+    };
+};
 
 clickBookTile = (count,bookTile,book,index) => {
     if(count===0 || count%2===0)
@@ -30,9 +30,9 @@ clickBookTile = (count,bookTile,book,index) => {
     else
     {
         removeTile(book.id);
-        bookTile.children[0].style.transform = 'rotate(0deg)'
+        bookTile.children[0].style.transform = 'rotate(0deg)';
         location.reload();
     }
     count++;
-    return count
-}
+    return count;
+};
