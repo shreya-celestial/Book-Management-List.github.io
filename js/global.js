@@ -18,7 +18,7 @@ const newInputsForForm = (type, name, parentElement) => {
     document.querySelector(`${parentElement}`).appendChild(element);
 };
 
-const addElementAfter = (elementType, id, elementText, elementParent) => {
+const addBookElementAfter = (elementType, id, elementText, elementParent) => {
     const element = document.createElement(`${elementType}`);
     element.setAttribute('class', 'bookDetails');
     element.setAttribute('id', id);
@@ -28,6 +28,10 @@ const addElementAfter = (elementType, id, elementText, elementParent) => {
 
 const addDetailElements = (elementType, elementAttributes, elementText, elementParentId) => {
     const element = document.createElement(`${elementType}`);
+    if(elementType === 'button')
+    {
+        element.setAttribute('class', 'deleteBtn');
+    }
     element.setAttribute(`${elementAttributes.type}`, `${elementAttributes.value}`);
     element.innerText = `${elementText}`;
     document.getElementById(`${elementParentId}`).appendChild(element);
@@ -62,4 +66,15 @@ const updateBook = (index, book) => {
     books.splice(index,1,book);
     localStorage.setItem('books',JSON.stringify(books));
 
+};
+
+const addElementAfter = (elementType, elementAttributes, elementText, elementParent) => {
+    const element = document.createElement(`${elementType}`);
+    element.setAttribute(`${elementAttributes.type}`, `${elementAttributes.value}`);
+    element.innerText = `${elementText}`;
+    document.querySelector(`${elementParent}`).after(element);
+};
+
+const removeElement = (element) => {
+    return document.querySelector(`${element}`).parentNode.removeChild(document.querySelector(`${element}`));
 };

@@ -131,7 +131,7 @@ body {
     cursor: default;
 }
 
-.containerBorder .books .booksList .bookDetails #deleteBtn {
+.containerBorder .books .booksList .bookDetails .deleteBtn {
     align-self: flex-end;
     padding: 5px 30px;
     background-color: #ff3131;
@@ -170,4 +170,53 @@ body {
     margin-left: 50px;
     cursor: pointer;
     height: 40px;
+}
+
+.containerBorder .books .booksList .bookDetails .deletePopup {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin: 0;
+}
+
+.containerBorder .books .booksList .bookDetails .deleteBox {
+    display: block;
+    text-align: center;
+    position: relative;
+    width:56%;
+    margin: 0 auto;
+    height: auto;
+    background: #FFFFFF;
+    border-radius: 8.34862px;
+    box-shadow: 0px 5.00917px 25.0459px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border: 1px solid #999;
+    overflow: auto;
+}
+
+.containerBorder .books .booksList .bookDetails .deleteBox p {
+    max-width: unset;
+    width: unset;
+    margin: 20px auto 0;
+    cursor: default;
+}
+
+.containerBorder .books .booksList .bookDetails .deleteBox h3 {
+    margin: 20px auto;
+    cursor: default;
+}
+
+.containerBorder .books .booksList .bookDetails .deleteBox button {
+    padding: 8px 35px;
+    margin: 5px auto 20px;
+    background-color: #2196f3;
+    color: #F0F8FF;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
 }

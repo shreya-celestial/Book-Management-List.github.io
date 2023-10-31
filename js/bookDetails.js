@@ -1,10 +1,10 @@
 const tileClicked = (bookTile,book,index) => {
 
     text = '';
-    addElementAfter('div',book.id,text,bookTile);
+    addBookElementAfter('div',book.id,text,bookTile);
 
     text = 'Delete';
-    attributes = new ElementAttributes('id', 'deleteBtn');
+    attributes = new ElementAttributes('id', `deleteBtn-${book.id}`);
     addDetailElements('button', attributes, text, book.id);
 
     bookName(book,index);
@@ -13,9 +13,11 @@ const tileClicked = (bookTile,book,index) => {
     bookDate(book,index);
     bookAuthor(book,index);
 
-    const deleteBtn = document.getElementById('deleteBtn');
+    const deleteBtn = document.getElementById(`deleteBtn-${book.id}`);
     deleteBtn.onclick = () => {
-        deleteBook(index);
+
+        getDeletePopUp(book, index);
+
     };
 
 };
