@@ -2,23 +2,6 @@
 
 Book Management List
 
-Contents
-
-
-
-											        Page No.
-
-
-Contents										     1
-Overview										     2
-Operations										     3
-	Get Books List								     4
-	Insert a Book 								     5
-	View Book Details								 6
-	Update Book Details							     7
-	Delete a Book								     8
-Conclusion										     9
-
 
 Overview
 
@@ -26,6 +9,7 @@ This is basically a Book List Management project where we can view the list of b
 
 This Book List Management project is available to us on the following link: https://shreya-celestial.github.io/Book-Management-List.github.io/ 
 We can click on the above link and get redirected directly to the web application for the above project.
+
 
 Operations
 
@@ -38,6 +22,7 @@ Update Book Details
 Delete a Book
 
 In the upcoming sections we will further discuss these operations in detail so that the user can get more clarity of how the web application for this project works.
+
 
 Get Books List
 
