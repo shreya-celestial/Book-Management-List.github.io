@@ -1,6 +1,6 @@
 let count = 0;
 
-clickInsertBookBtn = () => {
+const clickInsertBookBtn = () => {
     if(count===0 || count%2===0)
     {
         insertBookBtn.children[0].style.transform = 'rotate(90deg)';

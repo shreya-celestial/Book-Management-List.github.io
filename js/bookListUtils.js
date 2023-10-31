@@ -1,4 +1,4 @@
-renderBooksLoop = (book,index) => {
+const renderBooksLoop = (book,index) => {
     let count = 0;
 
     text = '';
@@ -21,7 +21,7 @@ renderBooksLoop = (book,index) => {
     };
 };
 
-clickBookTile = (count,bookTile,book,index) => {
+const clickBookTile = (count,bookTile,book,index) => {
     if(count===0 || count%2===0)
     {
         tileClicked(bookTile,book,index);
