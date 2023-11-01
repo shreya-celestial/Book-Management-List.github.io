@@ -1,5 +1,4 @@
 let count = 0;
-
 const clickInsertBookBtn = () => {
     if(count===0 || count%2===0)
     {
@@ -14,11 +13,8 @@ const clickInsertBookBtn = () => {
     count++;
 };
 
-
 const submitNewBookForm = (e) => {
-
     e.preventDefault();
-    
     const book = {
         id : uuid.v4(),
         name: e.target.elements.bookName.value,
@@ -27,9 +23,7 @@ const submitNewBookForm = (e) => {
         date: e.target.elements.publishDate.value,
         price: e.target.elements.price.value
     };
-
     books.push(book);
-
     e.target.elements.bookName.value = '';
     e.target.elements.bookDetails.value = '';
     e.target.elements.authorName.value = '';
@@ -40,5 +34,4 @@ const submitNewBookForm = (e) => {
     insertBookDiv.setAttribute('style', 'display: none');
     insertBookBtn.children[0].style.transform = 'rotate(0deg)';
     count++;
-
 };

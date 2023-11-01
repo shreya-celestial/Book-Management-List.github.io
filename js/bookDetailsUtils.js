@@ -1,26 +1,21 @@
 const clickDetailElements = (element, input) => {
-
     element.setAttribute('style', 'display: none');
     input.removeAttribute('style');
-
 };
 
 const getDeletePopUp = (book, index) => {
-    
     text = '';
     attibutes = new ElementAttributes('class', 'deletePopup');
     addElementAfter('div', attibutes, text, `button#deleteBtn-${book.id}`);
-
     text = '';
     attibutes = new ElementAttributes('class', 'deleteBox');
     addElementAfter('div', attibutes, text, 'div.deletePopup');
-
     text = "You are deleting the following book:";
     attributes = '';
     addElement('p', attributes, text, 'div.deleteBox');
-    text = `${book.name}`;
+    let headerText = `${book.name}`;
     attributes = '';
-    addElement('h3', attributes, text, 'div.deleteBox');
+    addElement('h3', attributes, headerText, 'div.deleteBox');
     text = `Ok`;
     attributes = new ElementAttributes('id', 'deleteBookBtn');
     addElement('button', attributes, text, 'div.deleteBox');
@@ -33,5 +28,4 @@ const getDeletePopUp = (book, index) => {
     document.querySelector('button#deleteBookBtn').onclick = () => {
         deleteBook(index);
     };
-
 };

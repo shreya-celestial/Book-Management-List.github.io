@@ -52,20 +52,16 @@ const removeTile = (id) => {
 };
 
 const deleteBook = (index) => {
-
     const books = JSON.parse(localStorage.getItem('books'));
     books.splice(index,1);
     localStorage.setItem('books',JSON.stringify(books));
     getBookList();
-
 };
 
 const updateBook = (index, book) => {
-
     const books = JSON.parse(localStorage.getItem('books'));
     books.splice(index,1,book);
     localStorage.setItem('books',JSON.stringify(books));
-
 };
 
 const addElementAfter = (elementType, elementAttributes, elementText, elementParent) => {
